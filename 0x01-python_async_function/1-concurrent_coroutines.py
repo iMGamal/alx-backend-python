@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """These are the modules for our program."""
-from basic_async_syntax import wait_random
+wait_random = __import__('0-basic_async_syntax').wait_random
 import asyncio
 import typing
 
