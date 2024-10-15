@@ -9,9 +9,9 @@ async def wait_n(n: int, max_delay: int) -> typing.List[float]:
     """Return a list of wait time."""
     wait_list: typing.List[float] = []
     for i in range(n):
-        temp: float = wait_random(max_delay)
-        wait_list.append(temp)
-    return sort(wait_list)
+        result = await wait_random(max_delay)
+        wait_list.append(result)
+    return sorted(wait_list)
 
 
 if __name__ == "__main__":
