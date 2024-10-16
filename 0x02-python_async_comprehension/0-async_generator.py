@@ -2,9 +2,10 @@
 """This is the module for our program."""
 import asyncio
 import random
+import typing
 
 
-async def async_generator():
+async def async_generator() -> typing.AsyncGenerator[float, None]:
     """Generate async."""
     for i in range(10):
         await asyncio.sleep(1)
