@@ -5,13 +5,13 @@ import time
 import random
 
 
-wait_n = __import__('1-concurrent_coroutines.py').wait_n
+wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
 async def measure_time(n: int, max_delay: int) -> float:
     """Return total time."""
-    start = time.time()
+    start: float = time.time()
     asyncio.run(wait_n(n, max_delay))
-    finish = time.time()
-    total_time = finish - start
+    finish: float = time.time()
+    total_time: float = finish - start
     return total_time / n
